@@ -1,0 +1,25 @@
+# Ansible-specific
+*.retry                  # Playbook retry files
+*.log                    # Log files
+
+# SSH keys (if any private keys are stored locally)
+*.pem
+*.key
+*.priv
+
+# Ignore inventories or specific host configurations (optional)
+inventory/*_vault.yml
+inventory/hosts
+
+# Python virtual environment
+venv/
+__pycache__/
+
+# OS-specific
+.DS_Store                # macOS file
+Thumbs.db                # Windows file
+
+# Temporary files
+*.swp                    # vi(m) swap files
+*.swo                    # vi(m) swap files
+*.bak                    # backup files
