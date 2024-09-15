@@ -1,0 +1,14 @@
+---
+- name: Update apt cache
+  apt:
+    update_cache: yes
+
+- name: Install essential packages
+  apt:
+    name:
+      - git
+      - vim
+      - curl
+      - nodejs
+      - npm
+    state: present
