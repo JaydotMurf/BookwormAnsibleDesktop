@@ -2,13 +2,23 @@
 - name: Update apt cache
   apt:
     update_cache: yes
+  tags: update
 
 - name: Install essential packages
   apt:
-    name:
-      - git
-      - vim
-      - curl
-      - nodejs
-      - npm
+    name: "{{ common_packages }}"
     state: present
+  when: common_packages is defined
+  tags: packages
+
+- name: Ensure Node.js is installed
+  apt:
+    name: nodejs
+    state: present
+  tags: nodejs
+
+- name: Ensure npm is installed
+  apt:
+    name: npm
+    state: present
+  tags: npm
