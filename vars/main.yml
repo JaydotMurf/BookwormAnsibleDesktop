@@ -5,4 +5,5 @@ common_packages:
   - curl
   - nodejs
   - npm
+  - tmux
 
