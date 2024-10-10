@@ -1,0 +1,26 @@
+# roles/install_defaults/tasks/install_bat.yml
+
+- name: Download bat .deb package
+  ansible.builtin.get_url:
+    url: "{{ bat_deb_url }}"
+    dest: "{{ bat_deb_file }}"
+    mode: '0644'
+  tags:
+    - bat
+    - download
+
+- name: Install bat package using dpkg
+  ansible.builtin.apt:
+    deb: "{{ bat_deb_file }}"
+    state: present
+  tags:
+    - bat
+    - install
+
+- name: Remove downloaded bat .deb file
+  ansible.builtin.file:
+    path: "{{ bat_deb_file }}"
+    state: absent
+  tags:
+    - bat
+    - cleanup

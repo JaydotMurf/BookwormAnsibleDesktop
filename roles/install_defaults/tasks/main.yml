@@ -1,5 +1,4 @@
 ---
-# tasks file for install_defaults
 - name: Install default packages
   ansible.builtin.package:
     name: "{{ item }}"
@@ -13,3 +12,9 @@
   include_tasks: install_eza.yml
   tags:
     - eza
+
+- name: Install bat tool
+  include_tasks: install_bat.yml
+  tags:
+    - bat
+

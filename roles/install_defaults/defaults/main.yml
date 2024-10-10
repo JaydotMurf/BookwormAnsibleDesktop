@@ -10,3 +10,7 @@ default_packages:
   - fzf
   - git
 
+# version and URLs for the bat installation
+bat_version: "0.23.0"
+bat_deb_url: "https://github.com/sharkdp/bat/releases/download/v{{ bat_version }}/bat-musl_{{ bat_version }}_amd64.deb"
+bat_deb_file: "/tmp/bat-musl_{{ bat_version }}_amd64.deb"
