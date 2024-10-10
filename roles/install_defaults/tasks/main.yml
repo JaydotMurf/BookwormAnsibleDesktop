@@ -8,3 +8,8 @@
   tags:
     - packages
     - installations
+
+- name: Install eza tool
+  include_tasks: install_eza.yml
+  tags:
+    - eza

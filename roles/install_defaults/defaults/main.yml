@@ -9,3 +9,4 @@ default_packages:
   - tree
   - fzf
   - git
+
