@@ -1,0 +1,6 @@
+---
+- name: Test default package installation
+  hosts: localhost
+  remote_user: root
+  roles:
+    - install_defaults

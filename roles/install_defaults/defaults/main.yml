@@ -1,0 +1,11 @@
+# defaults file for install_defaults
+default_packages:
+  - vim
+  - curl
+  - git
+  - htop
+  - wget
+  - unzip
+  - tree
+  - fzf
+  - git

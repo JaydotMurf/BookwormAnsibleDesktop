@@ -1,0 +1,10 @@
+---
+# tasks file for install_defaults
+- name: Install default packages
+  ansible.builtin.package:
+    name: "{{ item }}"
+    state: present
+  loop: "{{ default_packages }}"
+  tags:
+    - packages
+    - installations

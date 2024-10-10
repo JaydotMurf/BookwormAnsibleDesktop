@@ -3,6 +3,6 @@ common_packages:
   - git
   - vim
   - curl
-  - nodejs
-  - npm
-
+  - fzf
+  - tmux
+  - cmatrix
