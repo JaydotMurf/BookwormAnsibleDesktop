@@ -18,3 +18,7 @@
   tags:
     - bat
 
+- name: Install fzf tool
+  include_tasks: install_fzf.yml
+  tags:
+    - fzf
