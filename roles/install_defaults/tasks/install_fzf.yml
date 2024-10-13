@@ -1,0 +1,30 @@
+- name: Download the official fzf binary
+  ansible.builtin.get_url:
+    url: "{{ fzf_tar_url }}"
+    dest: "{{ fzf_tar_file }}"
+    mode: '0644'
+  tags:
+    - fzf
+    - download
+
+- name: Extract fzf tarball
+  ansible.builtin.unarchive:
+    src: "{{ fzf_tar_file }}"
+    dest: "/usr/local/bin"
+    remote_src: yes
+  tags:
+    - fzf
+
+- name: Ensure fzf is executable
+  ansible.builtin.file:
+    path: "/usr/local/bin/fzf"
+    mode: '0755'
+  tags: 
+    - fzf
+
+- name: Clean up fzf tarball
+  ansible.builtin.file:
+    path: "{{ fzf_tar_file }}"
+    state: absent
+  tags:
+    - fzf

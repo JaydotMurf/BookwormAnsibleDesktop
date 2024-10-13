@@ -5,12 +5,22 @@ default_packages:
   - git
   - htop
   - wget
-  - unzip
   - tree
-  - fzf
-  - git
 
-# version and URLs for the bat installation
-bat_version: "0.23.0"
+
+# Software Installation Varibles
+
+# ----------
+# bat
+# ----------
+bat_version: "0.24.0"
 bat_deb_url: "https://github.com/sharkdp/bat/releases/download/v{{ bat_version }}/bat-musl_{{ bat_version }}_amd64.deb"
 bat_deb_file: "/tmp/bat-musl_{{ bat_version }}_amd64.deb"
+
+# ----------
+# fzf
+# ----------
+fzf_version: "0.49.0"
+fzf_tar_url: "https://github.com/junegunn/fzf/releases/download/{{ fzf_version }}/fzf-{{ fzf_version }}-linux_amd64.tar.gz"
+fzf_tar_file: "/tmp/fzf-{{ fzf_version }}-linux_amd64.tar.gz"
+
